@@ -17,10 +17,10 @@ export default function EDIDashboardLayout({ children }) {
         </h1>
 
         <nav className="space-x-4">
-          <Link href="/edidashboard/generalsearch" className="hover:underline text-gray-200">
+          <Link href="/edidashboard/generalsearch" className="hover:text-orange-600 text-gray-200">
             General Search
           </Link>
-          <Link href="/edidashboard/trackpo" className="hover:underline text-gray-200">
+          <Link href="/edidashboard/trackpo" className="hover:text-orange-600  text-gray-200">
             Track PO
           </Link>
         </nav>
