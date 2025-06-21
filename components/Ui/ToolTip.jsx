@@ -1,32 +1,30 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Tooltip = ({ text, children }) => {
   const [show, setShow] = useState(false);
 
-  const toggleTooltip = () => setShow((prev) => !prev);
-
   return (
     <div
-      className="relative inline-block cursor-pointer  outline-dotted outline-1 rounded-full "
-      onClick={toggleTooltip}
+      className="relative inline-block"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
       {children}
+
       {show && (
-        <span
+        <div
           className="
-            absolute left-1/2 bottom-full mb-2 -translate-x-1/2
-            whitespace-nowrap rounded-xl bg-slate-100 
-            px-3 py-1.5 text-sm text-neutral-400 z-10 shadow-md transition-all
+            absolute top-full ml-10 p-1 mt-1 left-2/2 -translate-x-1/2
+            bg-black text-white text-xs px-3 py-1 rounded shadow-lg 
+            whitespace-nowrap z-50
           "
         >
           {text}
-        </span>
+        </div>
       )}
     </div>
   );
 };
+
 export default Tooltip;
